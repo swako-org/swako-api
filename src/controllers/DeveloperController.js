@@ -8,13 +8,7 @@ const BACK_END_ROLE = '695370283141431447';
 class DeveloperController extends Controller {
   load(route) {
     route.get('/', async (_, res) => {
-      const members = await DiscordRequest.getSwakoMembers().then(result =>
-        result.filter(member =>
-          member.roles.some(role =>
-            [FRONT_END_ROLE, BACK_END_ROLE].includes(role),
-          ),
-        ),
-      );
+      const members = await DiscordRequest.getSwakoMembers();
 
       return res.json({
         frontEnd: members.filter(m => m.roles.includes(FRONT_END_ROLE)),
