@@ -1,0 +1,31 @@
+{
+  "name": "swako-api",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon src/server.js",
+    "start": "sucrase-node src/index.js",
+    "lint": "eslint src --ext .js",
+    "lint:fix": "eslint src --ext .js --fix",
+    "prettier": "prettier --check src/**/*.js",
+    "prettier:fix": "prettier --write src/**/*.js"
+  },
+  "repository": "git@github.com:swako-org/swako-api.git",
+  "author": "Pablo Vinícius <dev.pablo.vinicius@gmail.com>",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-config-prettier": "^6.10.1",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-prettier": "^3.1.2",
+    "nodemon": "^2.0.2",
+    "prettier": "^2.0.2",
+    "sucrase": "^3.13.0"
+  }
+}
